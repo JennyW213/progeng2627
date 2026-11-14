@@ -1,11 +1,31 @@
 #include <iostream>
 
+double mypow(double base, int exp){
+    double result, acc=1;
+    if (exp == 0){
+        result = 1;
+    }
+    else if (exp > 0){
+        for (int i=0; i<(exp); i++){
+            acc = acc*base;
+            result = acc;
+    
+        }
+    }
+    else{
+        for (int i=0; i<(-(exp)); i++){
+            acc = acc/base;
+            result = acc;
+        }
+    }
+    return result;
+
+}
+
 double sum(int x,int n){
-    double sum, acc =0, count = 1, number; 
+    double acc =0; 
     for (int i=1; i<(n+1); i++){
-        number = count * x;
-        count = number;
-        acc = acc + number;
+        acc = acc + mypow (x,i);
     }
 
     return acc;

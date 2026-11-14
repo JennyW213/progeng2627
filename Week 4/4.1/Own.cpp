@@ -1,20 +1,18 @@
 #include <iostream>
 
 double mypow(double base, int exp){
-    double result, acc=1;
+    double result=1;
     if (exp == 0){
         result = 1;
     }
     else if (exp > 0){
         for (int i=0; i<(exp); i++){
-            acc = acc*base;
-            result = acc;
+            result = result*base;
         }
     }
     else{
         for (int i=0; i<(-(exp)); i++){
-            acc = acc/base;
-            result = acc;
+            result = result/base;
         }
     }
     return result;

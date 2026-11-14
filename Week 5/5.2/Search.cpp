@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-int search_vector(int n, const std::vector<int>& vin){
+int search_vector(int n, const std::vector<double>& vin){
     int j, output;
     for (int j=0; j < vin.size(); j++){
         if (vin[j] == n){
@@ -16,21 +16,15 @@ int search_vector(int n, const std::vector<int>& vin){
 }
 
 int main(){
-    std::vector<int> v;
-    int num, n;
-    double tmp;
+    int n = 3;
 
-    std::cout << "Please enter the number num: " << std::endl;
-    std::cin >> num;
+    std::vector<double> not_found {2,5,7};
+    std::cout << "Test not_found: " << (search_vector(n, not_found) == -1) << std::endl;
 
-    for (int i=0; i<num; i++){
-        std::cout << "Please enter a number: " << std::endl;
-        std::cin >> tmp;
-        v.push_back(tmp);
-    }
+    std::vector<double> found_at1 {2,3,5,3};
+    std::cout << "Test found_at1 first occurrence: " << (search_vector(n, found_at1) == 1) << std::endl;
 
-    std::cout << "Please enter the number n: " << std::endl;
-    std::cin >> n;
-
-    std::cout << "The index to be found : " << search_vector(n, v) << std::endl;
+    std::vector<double> found_at3 {2,7,9,3};
+    std::cout << "Test found_at3: " << (search_vector(n, found_at3) == 3) << std::endl;
+    
 }

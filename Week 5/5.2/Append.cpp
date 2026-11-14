@@ -14,8 +14,8 @@ void append_vector(const std::vector<int>& vin1, const std::vector<int>& vin2, s
 
 int main(){
     std::vector<int> vin1, vin2, v;
-    vin1 = {2,3,4};
-    vin2 = {3,5,8};
+    vin1 = {1,7,3,4};
+    vin2 = {2,-2,19};
 
     append_vector(vin1, vin2, v);
 
