@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 int main(){
     int n;
@@ -7,7 +8,7 @@ int main(){
     std::cout << "Please enter an integer greater than 1: " << std::endl;
     std::cin >> n;
 
-    for (int cf=2; cf<n; cf++){
+    for (int cf=2; cf< sqrt(n); cf++){
         if ((n%cf)==0) {
             found_factor = true;
         }

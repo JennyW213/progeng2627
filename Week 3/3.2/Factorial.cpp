@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main(){
-    int n, acc=1, factorial ;
+    int n, acc=1, factorial = 1 ;
     std::cin >> n;
 
     for (int i=0; i<n; i++){
